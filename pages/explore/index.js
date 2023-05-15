@@ -133,6 +133,11 @@ const Explore = ({ data, category, period }) => {
         setExplorer(false)
       }
       })
+      if(window.innerWidth > 800){
+        setExplorer(true)
+      }else{
+        setExplorer(false)
+      }
     // })
   },[])
   
