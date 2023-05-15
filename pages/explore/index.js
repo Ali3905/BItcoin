@@ -12,6 +12,8 @@ import ShareButton from '../../assets/Buttons1.png'
 // import ExpButt from '../../assets/.png'
 import Image from "next/image";
 import CourseMap from "../../components/ExplloreModel";
+import ShareIcon from '@mui/icons-material/Share';
+import CancelIcon from '@mui/icons-material/Cancel';
 // import Tailwing from "../../components/Tailwing";
 // import StyledMenu from "../../components/ShareModal"
 
@@ -30,8 +32,9 @@ export async function getServerSideProps(context) {
 }
 
 const Explore = ({ data, category, period }) => {
-  const [model, setModel] = useState(true)
+  const [model, setModel] = useState(false)
   const [M, setM] = useState(false)
+  const [explorer, setExplorer] = useState(true)
   const [selectedItem, setSelectedItem] = useState(category || "All Categories");
   const [selectedPeriod, setselectedPeriod] = useState(period || "all");
   const [selectedTab, setselectedTab] = useState("popular");
@@ -124,12 +127,14 @@ const Explore = ({ data, category, period }) => {
   useEffect(()=> {
     window.addEventListener('resize', ()=> {
       width = window.innerWidth
-      console.log('====================================');
-      console.log(width);
-      console.log('====================================');
-      console.log(window.innerHeight, window.innerWidth)
-    })
-  }, [])
+      if(window.innerWidth > 800){
+        setExplorer(true)
+      }else{
+        setExplorer(false)
+      }
+      })
+    // })
+  },[])
   
   // const [width, setWidth] = useState(0)
   let r = 0
@@ -182,11 +187,51 @@ const Explore = ({ data, category, period }) => {
               </button></div>
           </div>
 
-            <div onClick={()=>{setModel(true)}} className="text-black lg:hidden mr-3">
-              {/* <Image src={ShareButton} className="w-9 h-9 border border-black rounded-xl" /> */}
-              <img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAclBMVEX///8AAAD4+Pj7+/vq6urj4+PY2NjU1NSXl5fu7u6vr6/BwcHJycng4OCzs7MbGxunp6dLS0uLi4vPz8+enp5/f38nJyd1dXVTU1M/Pz9cXFy8vLxubm6Hh4cUFBQ2NjYuLi49PT1mZmYiIiJRUVEVFRWwhQ/iAAAKXUlEQVR4nN2d62KqMAyAAVEBJ17mZXi/bO//imfoPEOTtkmgI/r9PuOktmmTNEmDQD+d9C2brorDKAxHh+PHdDyIO23L1CDdfLkIAV+b8bBtyRohzSZwdDeKWbdt+erSX5mHd2Xy1raMdXizTN8v+3XbckrpkcZ3GeOgbVkldObU8ZWc0rblZTPgjK9k3LbETLbcAX5PY9S20AxisgZWWfTalpvMUDK+kmfZcN6kAwzDrG3ZSazlAwzDWdvSE6gxgyX6t9RevQGGoXYDp1t3gGH43vYYrHSO9UcYqj4Xl1bRvx3fbL3Oxond4fhoexQWcrPYxb27G+ef5n87bUt+J7FR5i3izcfJyPTP+38vO42NaU4MjkM0M/zB8W/lJmM4CQtLNCY1aKTSU/GAT6D9j8b4EFW6i/g24zSmezvB79IOSMCQdHx3z8jf7RROImpwkzbFFPvLxLe8fApETGKgEDP1duosG8ziJrtC2Pyr84anUEaG9YXE5Vb+ZBURIftMTP/zDrLbKFum71BC1l6BrFNlEY0ECDjizcEefODkSVQhcCdlRlxgBHnkR1IhHbjIuBegcBJVeRhwBthrDK5zVeY3tJ/ZxxkMIy99SCoFnmf8vR4sU1XRDLDRCKQDMZ6DphMReEBb/jeg98UwGXwTAeEEuwQMESjKYoD+j2Cnhx6GohE2IlwjP5MvoOskGCG0GhTloTQywgB8RNElDTytBSOE25WiOxqoh4KMNRgxV5T2BjcJQQyimaXui69H4QShMmi9axohsNoEVjNwLlTFTIFNeeZ/4+PxG0XzcsrJwApj25QpuGtTFcaAmyk7bQSapQLr3SNAvAX3C/DyUVdM+ATkYyapIZcXipynAAtjMGPWMGa+9yOpFOT+lzWJ0GTTdYUYIbcWvEAGkqaiyCoNMjypguEa9JE/9ycvlz5+fx8ytgrsXkfNFWnXlGISMowS7BtKjNIOpoC/bGhfqa3F/sjRPIoKc8pX0LwhFRGMPrxMARBsS3hh8c3Ev/hObApY4cPhAnXwdEYFFptdASuMrOttiK+D9qfQkmYJ2RjvHzqmwpO2N9J3LHfGRoIu1Whs2qhaNtiICnjPHNhgvS2W7XWh5UsnsgI+cN6s/9viw/XcaAiFbMfrnijqZ8l2uZpMTvMkyYcR87qdpYAIu/0exOUekd9uR8PZCXx+v8npas1WQAni8Mw7Vk99pZiSosuxRAHZTGRV7Kk5a/znu7nzG0QFdJY225HtMl1SwerM+m2iAs4jR82Fg5EkChxT/8vz2LhA3mklk6vLamcVAN+zkAzQlPGPccAjBylNARc3+0w8xEKwRHvG7QVnCafR4QP+p7LJwxA4CckuypnAK6PHaXT6gFfmd+urb7RXLAiqKyMYpyVwd+CyFLCCqVTEDPhpCcTMFXrj92Yspf1EZ8xBYlo/S4kKCgZ3ZXL93yLU+4YYrCzOCiokiSV16nE/yyHmDiPhh615g3c3NrmyFyU8I4nXDCZBX6iAD1IQxnjIRXaauOj/B6cDcBXOHRGLp/a9eCMMqsW0Lb4eO6KbM1gagnLnVS72dQlxvtpYFBAwHC8fVv1+k/RquPIOs+m42SbJdmNzs518sNN5ovRtnc2SZDbOBzHX837AchTtNnnlp+9mQl+HoIA+MRccrwbgp0tzfqcVqgJ6w3TSrgwRHlq/ql/mbWfyGI76kSVQzvEFPtqO1gYBborY07BSkJBkQENXLrw42qk5NBu0bQUs6aBnAOGXN5SNV5mrKIBATwqS6+VSRgUKeAGzZohJEdaAgAYFvIC5FOSsBkvASYMCXkHsNcadvym6okMBryDiMc5nLHHn21JQooAXkIJhVgQLCR4fVWRF/AeRkPX3iEmrKb0swLpvMLcIqMdqsq8uwNjFjumHwUlUkpz0AzzuSUlJVaCf4UNQMXCNseOQ0LJRVCMXBMBj5983wnxrPYc91vFOcJvTxDe80cjvD1a6poxyWNchOK2B/b1rXlAxjZQBwiBI22GZCvC2SSCc6pJq+PMLfAI4QkUtmqHdLfgIHKGiA9HTHCoqx/Wkh4oqrDztpYoc/Nc/D/3YNIKSXm/4sUtVNb/z4luoagTvxT/UEgq+4MXHV2SW+onT6Ipi+Ii1sVeBXzzES1WpoZeYtyKL5gKUsOa9haYozYXG754U9Wq6gt0e1bk/XOh7pbDhO2BVBs2Vhu/xte0zQdO5GLpaxPzQaD7NQd1GU9JsTtREURzqRtN5bRtVpveFxnMTE237TfP5pWdt6ughR3iiKPBd4iPPu7Y6RnF/kI+byfP2lKsvV8domM0fduuaufqe6i2E6vg+N5SY1am3qF0zY6Bgq+Nwbv+xT+KUq3p1T2Z46kip7RLWPdV+S9IMXR3fiNnjstq1Bl6TNDFy1+6XEMszL4jqD+U1pASBCOrIrHaW1JBK64BJbByXil1qecN/JHXAgaSWe98jJO2XJLb9QbQJyOIJPWaBWhn/JTYYsKgj8Ud6RBjX40zjzfoc0taYaX/4054KAaMvxqKyaa9pc4+qYw3tF/XFKMdI+VG/sjvF6hDnHoYqa3WxEfU2KXH2p/mEJmdEm/vdgzrWat5SqwuWpcfQJMETu3o0dbwL5UgbZf1+rYZfVfaJAlNZLDNL3tqAZjT8qqOwq0mVmjcll15f07LX12qzneVOF42pjs5nuf32+pJBVMfr1YFlyv+qX5sEujqa92ztPfcGtIY6RmfwGfom8g3cX56k9yVVHQFP1L+UqI4PPFcP2gE/gvd0fYS56viEvaBTlmf0nP28Ger4tD3Z4bNFBp64rz6txcRTv41AUcdnf9+i9+ka4fO/UTKwhw1e4p0Zqzq+xltBFnV8mfeeeqY8hxd6s8sQynmpd9cwu/LF3s5D1PHl3j88Pkr3cm9YAsfx1d4hhRbJq70l20j9t+r3gF//TefXf5f79d9Wb0Q41c0c4CYhuD+ChqmiEcLzUGA1w7xfDe7TDfDCjiAYCAIZLT/7dA80TPnSgRsMVV3GYIoQ22yDGbEC690f0GpmO3cwJKKpBRdyWofclAp4zaboOAyQrYYbxoCrYORHUilwjY14ew2cQj1BjAtIWjnLCUZKtIWp0b7A7lYYB3YHSYXQdBqWIHeAjPMMibuqaqlSguXNkzcbZI0qiQdXwZ5GJDp4WK7YTtsixeeBdqQhVxZtX5DioLFvQqiliyVcqYqV3sCrHp3q1ENTWNq/PMTA0w0dshrS+jVOobHIorCEPU0P0KkyuiuYctinhhmJTAlIx7+Vm465xHqLzGNszq7X5VVUsZRYF+O7Qca5JdNB5zZzxZ6i+TEdZ+t1Nk7sdZeqohePwK5/AvRZM1WcyfpuFN3HoNSuXFV0HWOgZv2x1pOwCmqCU1HYtQmhxiwqi1wYEbc70Of1moj5Lw5+s1DWP8WOqVTEwkn3OQggp0rfeIZN9J4OK6v/pNMhdGDMWwSoedSNDe39z71+M8aCu33LRFFOiYw0s0xkMdOUjSCnm2N15F+bsaLEtdp00rdsuioOozAcHY7frvAgZlyh/gNeQIjhpQXF/AAAAABJRU5ErkJggg==' 
-              className="w-6 h-6 border border-gray-300 rounded-lg p-1 " />
+
+            <div onClick={()=>{setModel(prev=> !prev)}} className="text-black lg:hidden mr-3" id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover" className="text-black bg-gray-100 hover:bg-white-800 focus:ring-4 focus:outline-none focus:ring-white-300 font-medium rounded-lg text-xs px-4 py-2.5 text-center inline-flex items-center dark:bg-white-600 dark:hover:bg-gray-200 dark:focus:ring-white-800" type="button">
+              {/* <Image src={ShareButton} className="w-9 h-9 border border-black rounded-xl" /> 
+              className="w-6 h-6 border border-gray-300 rounded-lg p-1 " />*/}
+              <ShareIcon/>
             </div>
+          {model &&<div id="dropdownHover1" className="z-50 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+    <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownHoverButton">
+      <li>
+                <button className={styles1.buttons1}>
+              <img
+                className={styles1.twitterLogo2429Icon}
+                alt=""
+                src="/twitterlogo2429.svg"
+                width={500}
+                height={500}
+              /><span className="ml-2">Twitter</span>
+              </button>
+      </li>
+      <li>
+      <button className={styles1.buttons1}>
+                <img
+                  className={styles1.twitterLogo2429Icon}
+                  alt=""
+                  src="/discordiconsvgrepocom-1.svg" width={500}
+                  height={500}
+                /><span className="ml-2">Discord</span>
+              </button>
+      </li>
+      <li>
+      <button className={styles1.buttons1}>
+                <img
+                  className={styles1.twitterLogo2429Icon}
+                  alt=""
+                  src="/linkbold.svg" width={500}
+                  height={500}
+                  
+                /><span className="ml-2">Copy Link</span>
+              </button>
+      </li>
+      {/* <li>
+        <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a>
+      </li> */}
+    </ul>
+</div>}
 
             
 
@@ -194,7 +239,7 @@ const Explore = ({ data, category, period }) => {
             <p className="header-near sm:w-full pr-2">NEAR-based multichain interoperable Octopus Network and Appchains Ecosystems</p> </div>
          
         </div>
-        <div onClick={()=>{}} className=" ex mt-3 rounded-md h-9 px-2 py-2 visible lg:hidden text-black justify-between font-semibold flex flex-row items-center">
+        <div onClick={()=>{setExplorer(prev=> !prev)}} className=" ex mt-3 rounded-md h-9 px-2 py-2 visible lg:hidden text-black justify-between font-semibold flex flex-row items-center">
           Explorer
           <div>
           <img
@@ -207,33 +252,36 @@ const Explore = ({ data, category, period }) => {
           <Row className="explore-content lg:gap-40" >
 
            
-        {/* {width<1000 ? null  : ( */}
-<Col style={{backgroundColor: "#FFFFFF "}} className='hidden lg:visible flex-col justify-start gap-2 rounded-sm'>
-{items.map((item) => ( 
-  <div key={item.category}>
-    <div
-      className={selectedItem === item.tag ? "activesidebar" : "sidebar"}
-      onClick={() => handleItemClick(item.tag)}
-    >
-      <div className="side-title">{item.category}</div>
-    </div>
-    {item.subcategories.length > 0 && (
-      <div className="subcategories">
-        {item.subcategories.map((sub) => (
+              {/* {width<1000 ? null  : ( */}
+     {explorer && <Col style={{backgroundColor: "#FFFFFF "}} className='lg:visible flex-col justify-start gap-2 rounded-sm explorer-col' onClick={()=>{if(window.innerWidth < 800){
+      // console.log(window.innerWidth > "800px")
+      setExplorer(prev=> !prev)}}}>
+      <CancelIcon className="cancel1"/>
+      { items.map((item) => ( 
+        <div key={item.category}>
           <div
-            key={sub.name}
-            className={selectedItem === sub.tag ? "activesidebar-sub" : "sidebar-sub"}
-            onClick={() => handleItemClick(item.tag, sub.tag)}
+            className={selectedItem === item.tag ? "activesidebar" : "sidebar"}
+            onClick={() => handleItemClick(item.tag)}
           >
-            <div className="side-title-sub">{sub.name}</div>
+            <div className="side-title">{item.category}</div>
           </div>
-        ))}
-      </div>
-    )}
+          {item.subcategories.length > 0 && (
+            <div className="subcategories">
+              {item.subcategories.map((sub) => (
+                <div
+                  key={sub.name}
+                  className={selectedItem === sub.tag ? "activesidebar-sub" : "sidebar-sub"}
+                  onClick={() => handleItemClick(item.tag, sub.tag)}
+                >
+                  <div className="side-title-sub">{sub.name}</div>
+                </div>
+              ))}
+            </div>
+          )}
 
-  </div>
-))}
-</Col>
+        </div>
+      ))}
+      </Col>}
 
             {/* )} */}
          
@@ -250,21 +298,21 @@ const Explore = ({ data, category, period }) => {
                   <div>
                     
 
-                  <button onClick={()=>{setM(prev=> !prev)}} id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover" class="text-black bg-gray-100 hover:bg-white-800 focus:ring-4 focus:outline-none focus:ring-white-300 font-medium rounded-lg text-xs px-4 py-2.5 text-center inline-flex items-center dark:bg-white-600 dark:hover:bg-gray-200 dark:focus:ring-white-800" type="button">All Time <svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 9l-7 7-7-7"></path></svg></button>
+                  <button onClick={()=>{setM(prev=> !prev)}} id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover" className="text-black bg-gray-100 hover:bg-white-800 focus:ring-4 focus:outline-none focus:ring-white-300 font-medium rounded-lg text-xs px-4 py-2.5 text-center inline-flex items-center dark:bg-white-600 dark:hover:bg-gray-200 dark:focus:ring-white-800" type="button">All Time <svg className="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M19 9l-7 7-7-7"></path></svg></button>
 {/* <!-- Dropdown menu --> */}
-{M &&<div id="dropdownHover" class="z-50 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
-    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownHoverButton">
+{M &&<div id="dropdownHover" className="z-50 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+    <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownHoverButton">
       <li>
-        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-black">Today</a>
+        <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-black">Today</a>
       </li>
       <li>
-        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">This week</a>
+        <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">This week</a>
       </li>
       <li>
-        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">This Month</a>
+        <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">This Month</a>
       </li>
       {/* <li>
-        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a>
+        <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a>
       </li> */}
     </ul>
 </div>}
@@ -301,14 +349,14 @@ const Explore = ({ data, category, period }) => {
                         // height={500}
                       /></Link>
                     <Link legacyBehavior href={`explore/${sample.project_id}`}><div>
-                      <div className="table-description"><div className="explore-title">{sample.project_id}</div>
-                        <p className="explore-text">Most loved Chia explorer for XCH,NFT,CAT and DID. Get the Chia blockchain
-                          trend on price,netspace,mempool,address,balance.</p></div>
+                      <div className="table-description card-div"><div className="explore-title">{sample.project_id}</div>
                       <ul className="explore-tags">
                         {sample.tags.map((tag, index) => (
                           <div className='explore-tag' key={index}>{tag}</div>
                         ))}
                       </ul>
+                        <p className="explore-text">Most loved Chia explorer for XCH,NFT,CAT and DID. Get the Chia blockchain
+                          trend on price,netspace,mempool,address,balance.</p></div>
                     </div></Link>
                     <div className="card-visit invisible lg:visible">
                       <Vote allVotes={sample.all_votes} />

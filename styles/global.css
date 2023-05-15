@@ -1949,7 +1949,7 @@ a {
   align-items: flex-start !important;
   padding: 0px !important;
   gap: 8px !important;
-  height: 70px !important;
+  min-height: 70px !important;
 }
 
 .explore-img {
@@ -1990,6 +1990,9 @@ a {
 }
 
 @media only screen and (min-width: 1px) and (max-width: 767px){
+  .pl-5{
+    padding-left: .5rem;
+  }
   .cardgridview{
   cursor: pointer !important;
   padding: 10px !important;
@@ -1999,9 +2002,46 @@ a {
   gap: 3% !important;
   border: 1px solid  #EEEFF2 !important;
   border-radius: 15px 15px 15px 15px !important;
-  max-width: 550px;
+  max-width: 345px;
  margin-bottom: 12px;
 }
+.explore-details {
+  border: none !important;
+}
+#dropdownHover{
+  position: absolute;
+  top: 20rem;
+  right: 3rem;
+}
+#dropdownHover1{
+  position: absolute;
+  top: 6rem;
+  right: 3rem;
+  padding: 5px 10px;
+}
+.explorer-col{
+  position: absolute;
+  top: 0rem;
+  left: 0.4rem;
+  width: 96vw;
+  height: fit-content;
+  padding: 2rem 5px 5px 5px;
+}
+.explorer-col div{
+   width: 100%;
+}
+.explorer-col div:hover{
+   background-color: #EEEFF2 !important;
+}
+
+.header-container {
+  display: flex !important;
+  gap: 47% !important;
+  align-self: normal;
+  /* width: -webkit-fill-available !important; */
+}
+
+
 }
 
 .cardgridview:hover {
@@ -2037,6 +2077,19 @@ a {
     color: #6F7588 !important;
     overflow: hidden;
 }
+.cancel{
+  /* display: inline; */
+  color: #000000;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 5;
+  background-color: black;
+}
+}
+
+.card_div ul{
+  margin-top: -2px;
 }
 
 .explore-tags {
@@ -2046,6 +2099,7 @@ a {
   align-items: flex-start !important;
   padding: 0px !important;
   gap: 6px !important;
+  margin-top: -.5rem;
 }
 
 .explore-tag {
@@ -2355,6 +2409,7 @@ Table sub clients bg (Neutral 0)
 .header-container {
   display: flex !important;
   gap: 47% !important;
+  align-self: center;
   /* width: -webkit-fill-available !important; */
 }
 
