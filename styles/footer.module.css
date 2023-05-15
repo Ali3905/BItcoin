@@ -1,0 +1,47 @@
+.Logo {
+  width: 24px !important;
+  height: 24px !important;
+  flex-shrink: 0 !important;
+  overflow: hidden !important;
+}
+
+.txt {
+  font-size: 12px !important;
+  line-height: 21px !important;
+  color: #6f7588 !important;
+}
+
+.headTxt {
+  font-size: 20px !important;
+  line-height: 21px !important;
+  color: black !important;
+  font-weight: bold !important;
+}
+
+.headText {
+  text-align: center!important;
+  display: flex !important;
+  font-size: 20px !important;
+  line-height: 21px !important;
+  color: black !important;
+  font-weight: bold !important;
+  display: flex;
+  justify-content: center;
+  min-width: 445%;
+}
+
+.headTxt .a {
+  text-decoration: underline !important;
+}
+
+@media screen and (max-width: 800px) {
+  .footerContainer{
+    display: flex;
+    flex-direction: column;
+    max-width: none;
+  }
+  .smContainer{
+    max-width: none;
+    margin: 5px 0;
+  }
+}

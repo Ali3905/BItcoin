@@ -1,0 +1,233 @@
+.meetTheTeam {
+  position: relative;
+  letter-spacing: -0.04em;
+  line-height: 40px;
+}
+.meetOurIncredible {
+  position: relative;
+  font-size: 20px;
+  letter-spacing: 0.02em;
+  line-height: 32px;
+  font-weight: 500;
+  color: var(--content-secondary);
+  text-align: center;
+  display: inline-block;
+  width: 781px;
+}
+.meetTheTeamParent {
+  width: 846px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+}
+.frameChild {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.profileInner,
+.profileA {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 280px;
+  overflow: hidden;
+}
+.profileA {
+  height: 8.57%;
+  width: 9.23%;
+  top: 105%;
+  right: 5.77%;
+  bottom: -13.57%;
+  left: 85%;
+  max-width: 100%;
+  max-height: 100%;
+  opacity: 0;
+}
+.profilepicA {
+  position: relative;
+  line-height: 22px;
+  font-weight: 600;
+}
+.profilepicA {
+  position: relative;
+  font-size: var(--caption-medium-size);
+  line-height: 18px;
+  color: var(--content-tertiary);
+}
+.profilepicAparent {
+  position: absolute;
+  height: 15%;
+  width: 44.84%;
+  top: 98.57%;
+  right: 50.08%;
+  bottom: -13.57%;
+  left: 5.08%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-11xs);
+  opacity: 0;
+}
+.groupChild,
+.profile {
+  position: absolute;
+  border-radius: var(--br-3xs);
+}
+.profile {
+  top: 1px;
+  left: 420px;
+  width: 252px;
+  height: 280px;
+  overflow: hidden;
+}
+.groupChild {
+  top: 296px;
+  left: 304px;
+  width: 291px;
+  height: 300px;
+  object-fit: cover;
+}
+.profilepicBparent{
+  position: absolute;
+  height: 15%;
+  width: 38.1%;
+  top: 98.57%;
+  right: 53.45%;
+  bottom: -13.57%;
+  left: 8.45%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-11xs);
+  opacity: 0;
+}
+.profile1,
+.profile2 {
+  top: 0;
+  width: 252px;
+  height: 280px;
+  overflow: hidden;
+}
+.profile1 {
+  position: absolute;
+  left: 686px;
+  border-radius: var(--br-3xs);
+}
+.profile2 {
+  left: 951px;
+}
+.groupItem,
+.profile2,
+.rectangleIcon {
+  position: absolute;
+  border-radius: var(--br-3xs);
+}
+.groupItem {
+  top: 296px;
+  left: 608px;
+  width: 291px;
+  height: 300px;
+  object-fit: cover;
+}
+.rectangleIcon {
+  top: 611px;
+  left: 305.5px;
+}
+.groupChild1,
+.groupChild2,
+.rectangleIcon {
+  width: 291px;
+  height: 300px;
+  object-fit: cover;
+}
+.groupChild1 {
+  position: absolute;
+  top: 611px;
+  left: 609.5px;
+  border-radius: var(--br-3xs);
+}
+.groupChild2 {
+  top: 296px;
+  left: 0;
+}
+.groupChild2,
+.groupChild3,
+.rectangleA {
+  position: absolute;
+  border-radius: var(--br-3xs);
+}
+.groupChild3 {
+  top: 296px;
+  left: 912px;
+  width: 291px;
+  height: 300px;
+  object-fit: cover;
+}
+.rectangleA {
+  text-decoration: none;
+  top: 0;
+  left: 0;
+  width: 407px;
+  height: 280px;
+  background-image: url(/rectangle37@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+.profileParent {
+  position: relative;
+  width: 1203px;
+  height: 911px;
+  flex-shrink: 0;
+  font-size: var(--body-copy-16-l-semi-bold-size);
+  color: var(--content-dark-mode-primary);
+}
+.frameGroup,
+.frameWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.frameGroup {
+  align-items: center;
+  gap: 120px;
+}
+.frameWrapper {
+  padding: 10px;
+  align-items: flex-start;
+}
+.frameParent {
+  position: absolute;
+  top: 176px;
+  left: 0;
+  height: 1717px;
+  align-items: center;
+  gap: 100px;
+  font-size: var(--heading-mobile-h1-mobile-bold-size);
+  color: #000;
+}
+.aboutUs {
+  position: relative;
+  background-color: var(--content-dark-mode-primary);
+  width: 100%;
+  height: 1893px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--body-copy-14-n-medium-size);
+  color: var(--content-primary);
+  font-family: var(--body-copy-16-l-semi-bold);
+}

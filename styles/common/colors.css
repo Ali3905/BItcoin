@@ -1,0 +1,295 @@
+:root {
+    --primaryAction: #007D54;
+    --primaryHover: #339776;
+    --primaryPressed: #339776;
+    --primaryDisabled: #B0D7CA;
+    --contentPrimary: #080C0F;
+    --contentSecondary: #6F7588;
+    --contentTertiary: #B7BAC3;
+    --successSurface: #EFFAF3;
+    --vredianGreen: #E6F2EE;
+    --successBorder: #9DE2CB;
+    --successStrongBorder: #39C596;
+    --successContent: #0A714F;
+    --errorSuface: #FDECEC;
+    --errorBorder: #F69393;
+    --errorStrongBorder: #F26464;
+    --errorContent: #EF4444;
+    --surfaceLight: #FAFAFA;
+    --surfaceBorder: #F1F1F3;
+    --surfaceDivider: #EEEFF2;
+    --surfaceStrongDivider: #E6E7E8;
+    --borderGray: #F9F9FB;
+    --pureWhite: #FFFFFF;
+    --pureBlack: #000000;
+    --SpanishViridianGreen :#00724C;
+}
+
+.textPrimaryAction {
+    color: var(--primaryAction) !important;
+}
+
+.backgroundPrimaryAction {
+    background-color: var(--primaryAction) !important;
+}
+
+.borderPrimaryAction {
+    border: 1px solid var(--primaryAction) !important;
+}
+
+.textprimaryHover {
+    color: var(--primaryHover) !important;
+}
+
+.backgroundprimaryHover {
+    background-color: var(--primaryHover) !important;
+}
+
+.borderprimaryHover {
+    border: 1px solid var(--primaryHover) !important;
+}
+
+.textprimaryPressed {
+    color: var(--primaryPressed) !important;
+}
+
+.backgroundprimaryPressed {
+    background-color: var(--primaryPressed) !important;
+}
+
+.borderprimaryPressed {
+    border: 1px solid var(--primaryPressed) !important;
+}
+
+
+.textprimaryDisabled {
+    color: var(--primaryDisabled) !important;
+}
+
+.backgroundprimaryDisabled {
+    background-color: var(--primaryDisabled) !important;
+}
+
+.borderprimaryDisabled {
+    border: 1px solid var(--primaryDisabled) !important;
+}
+
+
+.textcontentPrimary {
+    color: var(--contentPrimary) !important;
+}
+
+.backgroundcontentPrimary {
+    background-color: var(--contentPrimary) !important;
+}
+
+.bordercontentPrimary {
+    border: 1px solid var(--contentPrimary) !important;
+}
+
+
+.textcontentSecondary {
+    color: var(--contentSecondary) !important;
+}
+
+.backgroundcontentSecondary {
+    background-color: var(--contentSecondary) !important;
+}
+
+.bordercontentSecondary {
+    border: 1px solid var(--contentSecondary) !important;
+}
+
+.textcontentTertiary {
+    color: var(--contentTertiary) !important;
+}
+
+.backgroundcontentTertiary {
+    background-color: var(--contentTertiary) !important;
+}
+
+.bordercontentTertiary {
+    border: 1px solid var(--contentTertiary) !important;
+}
+
+
+.textsuccessSurface {
+    color: var(--successSurface) !important;
+}
+
+.backgroundsuccessSurface {
+    background-color: var(--successSurface) !important;
+}
+
+.bordersuccessSurface {
+    border: 1px solid var(--successSurface) !important;
+}
+
+
+.textsuccessBorder {
+    color: var(--successBorder) !important;
+}
+
+.backgroundsuccessBorder {
+    background-color: var(--successBorder) !important;
+}
+
+.bordersuccessBorder {
+    border: 1px solid var(--successBorder) !important;
+}
+
+.textsuccessStrongBorder {
+    color: var(--successStrongBorder) !important;
+}
+
+.backgroundsuccessStrongBorder {
+    background-color: var(--successStrongBorder) !important;
+}
+
+.bordersuccessStrongBorder {
+    border: 1px solid var(--successStrongBorder) !important;
+}
+
+.textsuccessContent {
+    color: var(--successContent) !important;
+}
+
+.backgroundsuccessContent {
+    background-color: var(--successContent) !important;
+}
+
+.bordersuccessContent {
+    border: 1px solid var(--successContent) !important;
+}
+
+.texterrorSurface {
+    color: var(--errorSurface) !important;
+}
+
+.backgrounderrorSurface {
+    background-color: var(--errorSurface) !important;
+}
+
+.bordererrorSurface {
+    border: 1px solid var(--errorSurface) !important;
+}
+
+.texterrorBorder {
+    color: var(--errorBorder) !important;
+}
+
+.backgrounderrorBorder {
+    background-color: var(--errorBorder) !important;
+}
+
+.bordererrorBorder {
+    border: 1px solid var(--errorBorder) !important;
+}
+
+
+.texterrorStrongBorder {
+    color: var(--errorStrongBorder) !important;
+}
+
+.backgrounderrorStrongBorder {
+    background-color: var(--errorStrongBorder) !important;
+}
+
+.bordererrorStrongBorder {
+    border: 1px solid var(--errorStrongBorder) !important;
+}
+
+.texterrorContent {
+    color: var(--errorContent) !important;
+}
+
+.backgrounderrorContent {
+    background-color: var(--errorContent) !important;
+}
+
+.bordererrorContent {
+    border: 1px solid var(--errorContent) !important;
+}
+
+.textsurfaceLight {
+    color: var(--surfaceLight) !important;
+}
+
+.backgroundsurfaceLight {
+    background-color: var(--surfaceLight) !important;
+}
+
+.bordersurfaceLight {
+    border: 1px solid var(--surfaceLight) !important;
+}
+
+.textsurfaceBorder {
+    color: var(--surfaceBorder) !important;
+}
+
+.backgroundsurfaceBorder {
+    background-color: var(--surfaceBorder) !important;
+}
+
+.bordersurfaceBorder {
+    border: 1px solid var(--surfaceBorder) !important;
+}
+
+.textsurfaceDivider {
+    color: var(--surfaceDivider) !important;
+}
+
+.backgroundsurfaceDivider {
+    background-color: var(--surfaceDivider) !important;
+}
+
+.bordersurfaceDivider {
+    border: 1px solid var(--surfaceDivider) !important;
+}
+
+.textsurfaceStrongDivider {
+    color: var(--surfaceStrongDivider) !important;
+}
+
+.backgroundsurfaceStrongDivider {
+    background-color: var(--surfaceStrongDivider) !important;
+}
+
+.bordersurfaceStrongDivider {
+    border: 1px solid var(--surfaceStrongDivider) !important;
+}
+
+.textborderGray {
+    color: var(--borderGray) !important;
+}
+
+.backgroundborderGray {
+    background-color: var(--borderGray) !important;
+}
+
+.borderborderGray {
+    border: 1px solid var(--borderGray) !important;
+}
+
+.textpureWhite {
+    color: var(--pureWhite) !important;
+}
+
+.backgroundpureWhite {
+    background-color: var(--pureWhite) !important;
+}
+
+.borderpureWhite {
+    border: 1px solid var(--pureWhite) !important;
+}
+.textpureBlack {
+    color: var(--pureBlack) !important;
+}
+
+.backgroundpureBlack {
+    background-color: var(--pureBlack) !important;
+}
+
+.borderpureBlack {
+    border: 1px solid var(--pureBlack) !important;
+}

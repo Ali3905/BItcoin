@@ -1,0 +1,54 @@
+import Link from "next/link";
+import React from "react";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import styles from "../styles/Review.module.css";
+
+const CourseMap = ({
+  id,
+  title,
+  description,
+  image,
+  onStartClick,
+  onDiscussClick,
+}) => (
+
+  <div className="modal-dialog items-center"> 
+
+        <div className="w-60 h-60 blur-3xl bg-blue-500 rounded-full absolute group-hover:bg-blue-600 duration-1000 right-5 bottom-14 opacity-20"></div>
+        <div className="w-60 h-60 blur-3xl bg-blue-500 rounded-full absolute group-hover:bg-blue-600 duration-1000 left-1 top-4 opacity-20"></div>
+       
+         <motion.div
+         whileHover={{ scale: 1.1 }}
+         
+         className="bg-clip-padding backdrop-filter px-6 py-4 backdrop-blur-xl bg-opacity-60 border border-white/10 bg-gradient-to-tl to-amber-800/10 group duration-500 rounded-3xl card-animation hover:border-white/80 via-wgite-900 from-white/10"
+       >
+       {/* <Image src={props.imgLink} alt="ima" width={100} height={100}/> */}
+        <div className="flex flex-row items-center ">
+       <div className="ml-7">
+      
+       </div>
+        </div>
+         <div className=" text-2xl items-center flex flex-row justify-center font-semibold mt-5 mb-5 text-pink-500">
+          <div></div>
+          Review title
+         </div>
+          {/* <div className="mb-5 flex flex-row p-1 items-center justify-center"> review</div> */}
+            {/* <Link href={`CourseMap/${id}`}> */}
+          {/* <i className="fa-solid fa-arrow-right"></i> */}
+        {/* </Link> */}
+      
+      {/* {true && (
+        <div className={`${styles.Category_operations} `}>
+          <Link href={`CourseMap/${id}`} className="cursor-pointer cat-option">
+          <p className="cursor-pointer bg-blue-500 rounded-full text-center p-2">Learn More</p>
+          </Link>
+        </div> 
+      )} */}
+       </motion.div>
+  
+
+ </div>
+
+);
+export default CourseMap;

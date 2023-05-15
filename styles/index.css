@@ -1,0 +1,111 @@
+.topview {
+  padding: 0% !important;
+}
+
+.topview .head {
+  display: flex !important;
+  align-items: center !important;
+}
+
+.topview .head .btn {
+  position: static !important;
+  border: 1px solid #F1F1F3 !important;
+  text-transform: none !important;
+  font-family: 'Poppins' !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  font-size: 16px !important;
+  line-height: 20px !important;
+  color: #080C0F !important;
+}
+
+.topview .head .btgrp {
+  justify-content: end !important;
+}
+
+.sorting .cell {
+  font-family: "Poppins" !important;
+  font-weight: 500 !important;
+  font-size: "1rem" !important;
+  color: "#6F7588" !important;
+}
+
+.marquegrid {
+  width: 90% !important;
+  position: relative !important;
+  top: 20px !important;
+  height: 200px !important;
+  border-radius: 20px !important;
+  background-color: #ffffff !important;
+}
+
+.menu {
+  justify-content: center !important;
+  align-items: center !important;
+  position: fixed !important;
+  width: 100% !important;
+  margin-right: 0% !important;
+  height: 72px !important;
+  background: #ffffff !important;
+}
+
+/* .align-container-center{display: flex!important;flex-direction: row!important;-webkit-box-pack: center!important;justify-content: center!important;-webkit-box-align: center!important;align-items: center!important;} */
+
+
+.border-none {
+  border: none !important;
+}
+
+.searchCol .border-group {
+  border: 1px solid #EEEFF2 !important;
+  border-radius: 10px !important;
+  padding: 2px !important;
+}
+
+.searchCol .border-group .search {
+  height: 40px !important;
+  color: #B8BFCA !important;
+  border-radius: 20px !important;
+  margin-top: auto !important;
+}
+
+.searchCol input[type="text"] {
+  height: 80% !important;
+  padding: 2px !important;
+}
+
+
+@keyframes slideIn {
+  from {
+    transform: translateX(0%) !important;
+    opacity: 1 !important;
+    margin-left: 5% !important;
+  }
+
+  to {
+    transform: translateX(-100%) !important;
+    opacity: 1 !important;
+    margin-left: 5% !important;
+
+  }
+}
+
+.grid-item {
+  position: relative !important;
+  left: 10 !important;
+  animation: slideIn 20s infinite !important;
+}
+
+
+.tab .li {
+  font-family: 'Poppins' !important;
+  font-style: normal !important;
+  font-size: 1.25rem !important;
+  line-height: 1.43rem !important;
+  letter-spacing: -0.02em !important;
+  cursor: pointer !important;
+  flex: none !important;
+  order: 0 !important;
+  flex-grow: 0 !important;
+  font-weight: 700 !important;
+}

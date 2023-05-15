@@ -1,0 +1,139 @@
+.display01 {
+    /* font 72px */
+    font-size: 4.5rem !important;
+    line-height: 5rem !important;
+    letter-spacing: -0.04em !important;
+}
+
+.display02 {
+    /* font 60px */
+    font-size: 3.75rem !important;
+    line-height: 4.5rem !important;
+    letter-spacing: -0.04em !important;
+}
+
+.heading01 {
+    /* font 48px */
+    font-size: 3rem !important;
+    line-height: 3.5rem !important;
+    letter-spacing: -0.04em !important;
+}
+
+.heading01s {
+    /* font 34px */
+    font-size: 2.125rem !important;
+    line-height: 2.5rem !important;
+    letter-spacing: -0.04em !important;
+}
+
+.heading02 {
+    /* font 40px */
+    font-size: 2.5rem !important;
+    line-height: 3rem !important;
+    letter-spacing: -0.04em !important;
+}
+
+.heading03 {
+    /* font 34px */
+    font-size: 2.125rem !important;
+    line-height: 2.5rem !important;
+    letter-spacing: -0.02em !important;
+}
+
+.heading04 {
+    /* font 28px */
+    font-size: 1.75rem !important;
+    line-height: 2.125rem !important;
+    letter-spacing: -0.02em !important;
+}
+
+.heading05 {
+    /* font 24px */
+    font-size: 1.5rem !important;
+    line-height: 1.75rem !important;
+    letter-spacing: -0.02em !important;
+}
+
+.heading06 {
+    /* font 19px */
+    font-size: 1.1875rem !important;
+    line-height: 1.4375rem !important;
+    letter-spacing: -0.02em !important;
+}
+
+.paragraph01 {
+    /* font 14px */
+    font-size: 0.875rem !important;
+    line-height: 1.0625rem !important;
+    letter-spacing: 0em !important;
+
+}
+
+.paragraph02 {
+    /* font 16px */
+    font-size: 1rem !important;
+    line-height: 1.5rem !important;
+    letter-spacing: 0em !important;
+}
+
+.subHeading {
+    /* font 20px */
+    font-size: 1.25rem !important;
+    line-height: 1.75rem !important;
+    letter-spacing: 0em !important;
+}
+
+.caption {
+    /* font 12px */
+    font-size: 0.75rem !important;
+    line-height: 1.125rem !important;
+    letter-spacing: 0em !important;
+}
+
+.textLeft {
+    text-align: left !important;
+}
+
+.textRight {
+    text-align: right !important;
+}
+
+.textCenter {
+    text-align: center !important;
+}
+
+.textJustify {
+    text-align: justify !important;
+}
+
+.textEnd {
+    text-align: end !important;
+}
+
+.textStart {
+    text-align: start !important;
+}
+
+.textLow {
+    font-weight: 400 !important;
+}
+
+.textMedium {
+    font-weight: 500 !important;
+}
+
+.textSemiBold {
+    font-weight: 600 !important;
+}
+
+.textBold {
+    font-weight: 700 !important;
+}
+
+.textExtraBold{
+    font-weight: 800 !important;
+}
+
+.texttransNone{
+    text-transform: none!important;
+}

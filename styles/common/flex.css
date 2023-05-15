@@ -1,0 +1,107 @@
+.flexBetween {
+    display: flex !important;
+    justify-content: space-between !important;
+}
+
+
+.flexAround {
+    display: flex !important;
+    justify-content: space-around !important;
+}
+
+
+.flexEvenly {
+    display: flex !important;
+    justify-content: space-evenly !important;
+}
+
+/* .flexJustifyEnd {
+    display: flex !important;
+    justify-content: end !important;
+}
+
+.flexJustifyStart {
+    display: flex !important;
+    justify-content: start !important;
+} */
+
+
+
+.flexMiddle {
+    display: flex !important;
+    justify-content: center !important;
+}
+
+
+.flexTop {
+    display: flex !important;
+    justify-content: flex-start !important;
+}
+
+
+.flexBottom {
+    display: flex !important;
+    justify-content: flex-end !important;
+}
+
+
+.flexCenter {
+    display: flex !important;
+    align-items: center !important;
+}
+
+
+.flexStart {
+    display: flex !important;
+    align-items: flex-start !important;
+}
+
+
+.flexEnd {
+    display: flex !important;
+    align-items: flex-end !important;
+}
+
+
+.flexColumn {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+
+.flexRow {
+    display: flex !important;
+    flex-direction: row !important;
+}
+
+
+.flexRowReverse {
+    display: flex !important;
+    flex-direction: row-reverse !important;
+}
+
+
+.flexColumnReverse {
+    display: flex !important;
+    flex-direction: column-reverse !important;
+}
+
+
+.flexWrapReverse {
+    display: flex !important;
+    flex-wrap: wrap-reverse !important;
+}
+
+
+.flexWrap {
+    display: flex !important;
+    flex-wrap: wrap !important;
+}
+
+.fullWidth {
+    width: 100% !important;
+}
+
+.halfWidth {
+    width: 50% !important;
+}

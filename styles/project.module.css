@@ -1,0 +1,727 @@
+.frame1 {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    padding: 0px !important;
+    gap: 24px !important;
+
+    position: absolute !important;
+    width: 80% !important;
+    height: 40% !important;
+    left: 40px !important;
+    top: 130px !important;
+}
+.footer{
+    width: 165%;
+    position: relative;
+    right: 180px;
+}
+.image1 {
+    width: 120px !important;
+    height: 120px !important;
+    border-radius: 20px !important;
+}
+
+.frame2 {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    padding: 0px !important;
+    gap: 8px !important;
+    width: 80% !important;
+}
+
+.header1 {
+    width: 30% !important;
+    height: 40px !important;
+
+    /* Heading Desktop/H3/Semi Bold */
+
+    font-family: 'Poppins' !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
+    font-size: 34px !important;
+    line-height: 40px !important;
+    /* identical to box height, or 118% */
+
+    letter-spacing: -0.02em !important;
+
+    /* Content/Primary */
+    color: #080C0F !important;
+    flex: none !important;
+    order: 0 !important;
+    flex-grow: 0 !important;
+}
+
+.description {
+    width: 70% !important;
+    /* Body Copy/14 N/Medium */
+
+    font-family: 'Poppins' !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    font-size: 14px !important;
+    line-height: 20px !important;
+    /* identical to box height, or 143% */
+
+
+    /* Content/Secondary */
+
+    color: #6F7588 !important;
+}
+
+.social {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    padding: 0px !important;
+    gap: 12px !important;
+    width: 70% !important;
+}
+
+.button1 {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 8px !important;
+    gap: 8px !important;
+    width: 90px !important;
+    height: 36px !important;
+
+    /* Surface/Light Surface
+
+Table sub clients bg (Neutral 0)
+*/
+    background: #F9F9FB !important;
+    border-radius: 5px !important;
+}
+
+.logo1 {
+
+    width: 18px !important;
+    height: 18px !important;
+}
+
+.socialName {
+    width: 48px !important;
+    height: 20px !important;
+
+    /* Body Copy/14 N/Medium */
+
+    font-family: 'Poppins' !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    font-size: 14px !important;
+    line-height: 20px !important;
+    /* identical to box height, or 143% */
+
+
+    /* Content/Secondary */
+
+    color: #6F7588 !important;
+}
+
+.frame3 {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    padding: 0px !important;
+    gap: 16px !important;
+
+    position: absolute !important;
+    width: 160px !important;
+    height: 200px !important;
+    left: 85% !important;
+    top: 130px !important;
+}
+
+.frame4 {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    padding: 0px !important;
+    gap: 16px !important;
+
+    width: 160px !important;
+    height: 104px !important;
+
+
+    /* Inside auto layout */
+
+    flex: none !important;
+    order: 0 !important;
+    align-self: stretch !important;
+    flex-grow: 0 !important;
+}
+
+.upvotebutton {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 12px !important;
+    gap: 8px !important;
+
+    width: 160px !important;
+    height: 44px !important;
+
+    /* Content/Primary */
+
+    background: #080C0F !important;
+    border-radius: 8px !important;
+
+    /* Inside auto layout */
+
+    flex: none !important;
+    order: 0 !important;
+    align-self: stretch !important;
+    flex-grow: 0 !important;
+}
+
+.upvote {
+    width: 110px !important;
+    height: 20px !important;
+
+    /* Body Copy/14 N/Medium */
+
+    font-family: 'Poppins' !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    font-size: 14px !important;
+    line-height: 20px !important;
+    /* identical to box height, or 143% */
+
+    display: flex !important;
+    align-items: flex-end !important;
+
+    /* Primary/Content */
+
+    color: #FFFFFF !important;
+
+
+    /* Inside auto layout */
+
+    flex: none !important;
+    order: 1 !important;
+    flex-grow: 0 !important;
+    cursor: pointer;
+}
+
+.visit {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 12px 16px !important;
+    gap: 10px !important;
+
+    width: 160px !important;
+    height: 44px !important;
+
+    background: #FFFFFF !important;
+    /* Neutral/N 50 */
+
+    border: 1.5px solid #F1F1F3 !important;
+    border-radius: 8px !important;
+
+    /* Inside auto layout */
+
+    flex: none !important;
+    order: 1 !important;
+    align-self: stretch !important;
+    flex-grow: 0 !important;
+    font-family: 'Poppins' !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    font-size: 14px !important;
+    line-height: 20px !important;
+    /* identical to box height, or 143% */
+
+
+    /* Content/Primary */
+
+    color: #080C0F !important;
+    cursor: pointer;
+}
+
+.share {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    padding: 0px !important;
+    gap: 16px !important;
+    cursor: pointer !important;
+    width: 160px !important;
+    height: 80px !important;
+
+
+    /* Inside auto layout */
+
+    flex: none !important;
+    order: 1 !important;
+    align-self: stretch !important;
+    flex-grow: 0 !important;
+}
+
+.Share {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+    padding: 6px 12px !important;
+    gap: 10px !important;
+    width: 76px !important;
+    height: 32px !important;
+
+
+    /* Inside auto layout */
+
+    flex: none !important;
+    order: 1 !important;
+    flex-grow: 0 !important;
+
+    /* Body Copy/14 N/Medium */
+
+    font-family: 'Poppins' !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    font-size: 14px !important;
+    line-height: 20px !important;
+    /* identical to box height, or 143% */
+
+
+    /* Content/Secondary */
+
+    color: #6F7588 !important;
+}
+
+.report {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 6px 12px !important;
+    gap: 10px !important;
+
+    width: 140px !important;
+    height: 32px !important;
+
+
+    /* Inside auto layout */
+
+    flex: none !important;
+    order: 0 !important;
+    flex-grow: 0 !important;
+    font-family: 'Poppins' !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    font-size: 14px !important;
+    line-height: 20px !important;
+    /* identical to box height, or 143% */
+
+
+    /* Content/Secondary */
+
+    color: #6F7588 !important;
+}
+
+.imagelist {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    padding: 0px !important;
+    gap: 12px !important;
+    height: 52px !important;
+}
+
+.describeText {
+    height: 45% !important;
+    font-family: 'Poppins' !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    font-size: 15px !important;
+    line-height: 24px !important;
+    /* or 160% */
+    /* Content/Secondary */
+
+    color: #6F7588 !important;
+}
+
+.describe {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    padding: 0px !important;
+    gap: 24px !important;
+
+    position: absolute !important;
+    width: 65% !important;
+    height: 184px !important;
+    left: 12% !important;
+    top: 840px !important;
+}
+
+.tags {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    padding: 0px !important;
+    gap: 8px !important;
+    height: 34px !important;
+}
+
+.tag {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    padding: 8px !important;
+    gap: 14px !important;
+    background: #F9F9FB !important;
+    border-radius: 6px !important;
+    font-family: 'Poppins' !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    font-size: 12px !important;
+    line-height: 18px !important;
+
+    color: #080C0F !important;
+}
+
+.tagbox {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    padding: 0px !important;
+    gap: 16px !important;
+    width: 100% !important;
+    height: 40px !important;
+}
+
+.websiteshare {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    padding: 10px !important;
+    gap: 10px !important;
+
+    border-radius: 10px !important;
+    font-family: 'Poppins' !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    font-size: 14px !important;
+    line-height: 20px !important;
+    /* identical to box height, or 143% */
+
+
+    /* Primary/Action */
+
+    color: #007D54 !important;
+
+}
+
+.meettab {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 0px !important;
+    gap: 12px !important;
+    height: 28px !important;
+
+
+    /* Inside auto layout */
+
+    flex: none !important;
+    order: 0 !important;
+    align-self: stretch !important;
+    flex-grow: 0 !important;
+}
+
+.meettheteam {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    padding: 0px !important;
+    gap: 6px !important;
+
+    width: 324.2px !important;
+    height: 28px !important;
+
+
+    /* Inside auto layout */
+
+    flex: none !important;
+    order: 0 !important;
+    flex-grow: 0 !important;
+    font-family: 'Poppins' !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    font-size: 24px !important;
+    line-height: 28px !important;
+    /* identical to box height, or 117% */
+
+    letter-spacing: -0.02em !important;
+
+    /* gray/900 */
+
+    color: #18181B !important;
+}
+
+.viewall {
+
+    width: 56px !important;
+    height: 21px !important;
+
+    font-family: 'Poppins' !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    line-height: 21px !important;
+    /* identical to box height */
+
+
+    /* Content/Secondary */
+
+    color: #6F7588 !important;
+}
+
+.teamview {
+    box-sizing: border-box !important;
+
+    /* Auto layout */
+
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 12px 4px !important;
+    background: #FFFFFF !important;
+    border-radius: 15px !important;
+
+}
+
+.twittername {
+    width: 140px !important;
+    height: 18px !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    /* Caption/Regular */
+
+    font-family: 'Poppins' !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    font-size: 12px !important;
+    line-height: 18px !important;
+    /* identical to box height, or 150% */
+
+    text-align: center !important;
+
+    /* Content/Secondary */
+
+    color: #6F7588 !important;
+}
+
+.teamlist {
+    box-sizing: border-box !important;
+
+    /* Auto layout */
+
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 12px 4px !important;
+    gap: 6% !important;
+
+    background: #FFFFFF !important;
+    border-radius: 15px !important;
+}
+
+.name {
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 0px !important;
+    gap: 2px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 140px !important;
+    height: 40px !important;
+    font-family: 'Poppins' !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    line-height: 20px !important;
+    /* identical to box height, or 143% */
+
+    text-align: center !important;
+
+    /* Content/Primary */
+
+    color: #080C0F !important;
+}
+
+.profileimg {
+    object-fit: cover !important;
+    border-radius: 50% !important;
+    width: 60% !important;
+    padding-bottom: 10px !important;
+    height: 60% !important;
+}
+
+.teams {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    list-style: none !important;
+    align-items: center !important;
+    padding: 0px !important;
+    gap: 15px !important;
+    border-radius: 10px !important;
+}
+
+.team {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    padding: 0px !important;
+    gap: 11px !important;
+
+    position: absolute !important;
+    width: 65% !important;
+    height: 198px !important;
+    left: 12% !important;
+    top: 1040px !important;
+}
+
+.image {
+    box-sizing: border-box !important;
+    width: 52px !important;
+    height: 52px !important;
+    /* Content/Tertiary */
+
+    border: 1px solid #B7BAC3 !important;
+    border-radius: 6px !important;
+
+}
+
+.preview {
+    box-sizing: border-box !important;
+
+    width: 100% !important;
+    height: 460px !important;
+    /* Surface/Divider */
+
+    border: 1px solid #EEEFF2 !important;
+    border-radius: 10px !important;
+}
+
+.images {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 0px !important;
+    gap: 16px !important;
+
+    position: absolute !important;
+    width: 65% !important;
+    left: 12% !important;
+    top: 17rem !important;
+}
+
+.sharelogo {
+    width: 20px !important;
+    height: 20px !important;
+    /* Inside auto layout */
+
+    flex: none !important;
+    order: 0 !important;
+    flex-grow: 0 !important;
+}
+
+.sharetext {
+    width: 150px !important;
+    height: 20px !important;
+
+    /* Body Copy/14 N/Medium */
+
+    font-family: 'Poppins' !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    font-size: 14px !important;
+    line-height: 20px !important;
+    /* identical to box height, or 143% */
+
+
+    /* Content/Primary */
+
+    color: #080C0F !important;
+
+
+    /* Inside auto layout */
+
+    flex: none !important;
+    order: 1 !important;
+    flex-grow: 1 !important;
+}
+
+.sharesocial {
+    cursor: pointer !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    padding: 12px 16px !important;
+    gap: 6px !important;
+
+    width: 110%px !important;
+    height: 44px !important;
+
+    background: #FFFFFF !important;
+    border-radius: 8px !important;
+
+    /* Inside auto layout */
+
+    flex: none !important;
+    order: 0 !important;
+    align-self: stretch !important;
+    flex-grow: 0 !important;
+}
+
+.upvotedprofiles {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    padding: 0px !important;
+    gap: 11px !important;
+
+    position: absolute !important;
+    width: 65% !important;
+    height: 198px !important;
+    left: 12% !important;
+    top: 1350px !important;
+}
+
+.shareButtons {
+    box-sizing: border-box !important;
+    /* Auto layout */
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    padding: 8px !important;
+    gap: 2px !important;
+    position: absolute !important;
+    width: 150% !important;
+    height: 150px !important;
+    right: 13% !important;
+    top: 230px !important;
+    background: #FFFFFF !important;
+    /* Surface/Strong Divider */
+
+    border: 1px solid #E6E7E8 !important;
+    border-radius: 10px !important;
+}
