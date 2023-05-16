@@ -14,8 +14,11 @@ import Image from "next/image";
 import CourseMap from "../../components/ExplloreModel";
 import ShareIcon from '@mui/icons-material/Share';
 import CancelIcon from '@mui/icons-material/Cancel';
+import { Modal, Box, Typography } from "@mui/material";
 // import Tailwing from "../../components/Tailwing";
 // import StyledMenu from "../../components/ShareModal"
+import Button from "@mui/material";
+import SimpleDialog from "@mui/material"
 
 
 export async function getServerSideProps(context) {
@@ -34,6 +37,8 @@ export async function getServerSideProps(context) {
 const Explore = ({ data, category, period }) => {
   const [model, setModel] = useState(false)
   const [M, setM] = useState(false)
+  const [N, setN] = useState(false)
+  const [A, setA] = useState(false)
   const [explorer, setExplorer] = useState(true)
   const [selectedItem, setSelectedItem] = useState(category || "All Categories");
   const [selectedPeriod, setselectedPeriod] = useState(period || "all");
@@ -122,27 +127,51 @@ const Explore = ({ data, category, period }) => {
 
 
   
-  let width = 0
+  var width = 0
   
   useEffect(()=> {
     window.addEventListener('resize', ()=> {
       width = window.innerWidth
       if(window.innerWidth > 800){
         setExplorer(true)
+        setN(false)
+        // searchStyle={
+        //   "display": "none"
+        // }
       }else{
         setExplorer(false)
+        setN(true)
       }
       })
       if(window.innerWidth > 800){
         setExplorer(true)
+        setN(false)
       }else{
         setExplorer(false)
+        setN(true)
       }
-    // })
+
   },[])
   
   // const [width, setWidth] = useState(0)
   let r = 0
+
+  const style = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    overflow: 'scroll',
+    transform: 'translate(-50%, -50%)',
+    width: 360,
+    height: 780,
+    bgcolor: 'background.paper',
+    border: '2px solid #000',
+    boxShadow: 24,
+    p: 4,
+  };
+
+  const handleOpen = () => setA(true);
+  const handleClose = () => setA(false);
 
   return (
     <>
@@ -193,10 +222,10 @@ const Explore = ({ data, category, period }) => {
           </div>
 
 
-            <div onClick={()=>{setModel(prev=> !prev)}} className="text-black lg:hidden mr-3" id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover" className="text-black bg-gray-100 hover:bg-white-800 focus:ring-4 focus:outline-none focus:ring-white-300 font-medium rounded-lg text-xs px-4 py-2.5 text-center inline-flex items-center dark:bg-white-600 dark:hover:bg-gray-200 dark:focus:ring-white-800" type="button">
+            <div onClick={()=>{setModel(prev=> !prev)}} className="text-black lg:hidden mr-3 share-container" id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover" className="text-black bg-gray-100 hover:bg-white-800 focus:ring-4 focus:outline-none focus:ring-white-300 font-medium rounded-lg text-xs px-4 py-2.5 text-center inline-flex items-center dark:bg-white-600 dark:hover:bg-gray-200 dark:focus:ring-white-800" type="button">
               {/* <Image src={ShareButton} className="w-9 h-9 border border-black rounded-xl" /> 
               className="w-6 h-6 border border-gray-300 rounded-lg p-1 " />*/}
-              <ShareIcon/>
+              <ShareIcon className="searchIcon"/>
             </div>
           {model &&<div id="dropdownHover1" className="z-50 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
     <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownHoverButton">
@@ -244,7 +273,7 @@ const Explore = ({ data, category, period }) => {
             <p className="header-near sm:w-full pr-2">NEAR-based multichain interoperable Octopus Network and Appchains Ecosystems</p> </div>
          
         </div>
-        <div onClick={()=>{setExplorer(prev=> !prev)}} className=" ex mt-3 rounded-md h-9 px-2 py-2 visible lg:hidden text-black justify-between font-semibold flex flex-row items-center">
+        <div onClick={handleOpen} className=" ex mt-3 rounded-md h-9 px-2 py-2 visible lg:hidden text-black justify-between font-semibold flex flex-row items-center">
           Explorer
           <div>
           <img
@@ -257,8 +286,50 @@ const Explore = ({ data, category, period }) => {
           <Row className="explore-content lg:gap-40" >
 
            
-              {/* {width<1000 ? null  : ( */}
-     {explorer && <Col style={{backgroundColor: "#FFFFFF "}} className='lg:visible flex-col justify-start gap-2 rounded-sm explorer-col' onClick={()=>{if(window.innerWidth < 800){
+          {/* <Button onClick={handleOpen}>Open modal</Button> */}
+         <Modal
+            open={A}
+            onClose={handleClose}
+            aria-labelledby="modal-modal-title"
+            aria-describedby="modal-modal-description"
+          >
+            <Box sx={style}>
+
+     {A && <Col style={{backgroundColor: "#FFFFFF "}} className='lg:visible flex-col justify-start gap-2  rounded-sm explorer-col' onClick={()=>{if(window.innerWidth < 800){
+      // console.log(window.innerWidth > "800px")
+      setA(prev=> !prev)}}}>
+      <CancelIcon className="cancel1"/>
+      { items.map((item) => ( 
+        <div key={item.category}>
+          <div
+            className={selectedItem === item.tag ? "activesidebar" : "sidebar"}
+            onClick={() => handleItemClick(item.tag)}
+          >
+            <div className="side-title">{item.category}</div>
+          </div>
+          {item.subcategories.length > 0 && (
+            <div className="subcategories">
+              {item.subcategories.map((sub) => (
+                <div
+                  key={sub.name}
+                  className={selectedItem === sub.tag ? "activesidebar-sub" : "sidebar-sub"}
+                  onClick={() => handleItemClick(item.tag, sub.tag)}
+                >
+                  <div className="side-title-sub">{sub.name}</div>
+                </div>
+              ))}
+            </div>
+          )}
+
+        </div>
+      ))}
+      </Col>}
+
+            </Box>
+          </Modal>
+
+
+          {explorer && <Col style={{backgroundColor: "#FFFFFF "}} className='lg:visible flex-col justify-start gap-2  rounded-sm explorer-col' onClick={()=>{if(window.innerWidth < 800){
       // console.log(window.innerWidth > "800px")
       setExplorer(prev=> !prev)}}}>
       <CancelIcon className="cancel1"/>
@@ -287,6 +358,7 @@ const Explore = ({ data, category, period }) => {
         </div>
       ))}
       </Col>}
+  
 
             {/* )} */}
          
@@ -303,7 +375,7 @@ const Explore = ({ data, category, period }) => {
                   <div>
                     
 
-                  <button onClick={()=>{setM(prev=> !prev)}} id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover" className="text-black bg-gray-100 hover:bg-white-800 focus:ring-4 focus:outline-none focus:ring-white-300 font-medium rounded-lg text-xs px-4 py-2.5 text-center inline-flex items-center dark:bg-white-600 dark:hover:bg-gray-200 dark:focus:ring-white-800" type="button">All Time <svg className="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M19 9l-7 7-7-7"></path></svg></button>
+                  {N && <button onClick={()=>{setM(prev=> !prev)}} id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover" className="text-black bg-gray-100 hover:bg-white-800 focus:ring-4 focus:outline-none focus:ring-white-300 font-medium rounded-lg text-xs px-4 py-2.5 text-center inline-flex items-center dark:bg-white-600 dark:hover:bg-gray-200 dark:focus:ring-white-800" type="button">All Time <svg className="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M19 9l-7 7-7-7"></path></svg></button>}
 {/* <!-- Dropdown menu --> */}
 {M &&<div id="dropdownHover" className="z-50 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
     <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownHoverButton">

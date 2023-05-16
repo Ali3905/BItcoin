@@ -9,6 +9,7 @@ import styles from '../styles/Home.module.css';
 import Link from 'next/link';
 import Footer from "../components/Footer";
 import { SubmitProject } from "../components/WalletConnect/WalletConnect";
+import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import HamMenu from "../components/HamMenu";
 
 export default function Home() {
@@ -158,6 +159,11 @@ export default function Home() {
                   <Typo className={styles.projName}>NearBlocks</Typo>
                 </Button>
               </Grid>
+              <Grid item>
+                <Button style={{ display: "flex", flexDirection: "row",  }}>
+                  <Typo className={styles.projName}>Explore More <NavigateNextIcon/></Typo>
+                </Button>
+              </Grid>
             </Grid>
           </Grid>
           <Grid item xs={4} >
@@ -190,6 +196,11 @@ export default function Home() {
                   <Typo className={styles.projName}>NearBlocks</Typo>
                 </Button>
               </Grid>
+              <Grid item>
+                <Button style={{ display: "flex", flexDirection: "row",  }}>
+                  <Typo className={styles.projName}>Explore More <NavigateNextIcon/></Typo>
+                </Button>
+              </Grid>
             </Grid>
           </Grid>
           <Grid item xs={4} >
@@ -220,6 +231,11 @@ export default function Home() {
                 <Button style={{ display: "flex", flexDirection: "row" }}>
                   <img className={styles.projImg} src='/images/nearblocks.png' />
                   <Typo className={styles.projName}>NearBlocks</Typo>
+                </Button>
+              </Grid>
+              <Grid item>
+                <Button style={{ display: "flex", flexDirection: "row",  }}>
+                  <Typo className={styles.projName}>Explore More <NavigateNextIcon/></Typo>
                 </Button>
               </Grid>
             </Grid>

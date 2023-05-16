@@ -10,6 +10,11 @@
   line-height: 21px !important;
   color: #6f7588 !important;
 }
+.txt1 {
+  font-size: 12px !important;
+  line-height: 21px !important;
+  color: #6f7588 !important;
+}
 
 .headTxt {
   font-size: 20px !important;
@@ -44,4 +49,26 @@
     max-width: none;
     margin: 5px 0;
   }
+  
+.headText {
+  /* text-align: center!important;
+  display: flex !important;
+  font-size: 20px !important;
+  line-height: 21px !important;
+  color: black !important;
+  font-weight: bold !important;
+  display: flex;
+  justify-content: center; */
+  min-width: 20rem;
+  margin-top: .4rem;
+}
+.footerTxt{
+  margin: 0 0 .5rem 0;
+  padding: 0 0 .9rem 0;
+  border-bottom: 1px solid rgb(198, 198, 198);
+}
+.txt1 {
+  text-align: center;
+  margin-top: .5rem;
+}
 }

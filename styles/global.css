@@ -404,6 +404,7 @@ a {
   font-family: 'poppins' !important;
   font-weight: 500 !important;
   font-size: 0.9rem !important;
+  margin-left: 0;
 }
 
 .btn {
@@ -1040,8 +1041,11 @@ a {
   font-weight: 700 !important;
   font-size: '1rem'
 }
+.searchIcon{
+  /* display: none; */
+}
 
-@media (min-width:800px) {
+@media (min-width:767px) {
 
   .explorer .p1 .b1 {
     display: flex !important;
@@ -1163,6 +1167,14 @@ a {
     background-size: cover !important;
     border-radius: 20px !important;
   }
+  .searchIcon{
+    /* display: inline-block; */
+    /* background-color: blue; */
+  }
+  .connectwallet {
+    margin-left: 8px;
+  }
+  
 
 }
 
@@ -1809,10 +1821,27 @@ a {
   border-radius: 12px !important;
   width: 222px !important;
 }
+@media screen and (max-width: 800px) {
+  .sitefooter {
+    padding: 0.875rem 2.5rem 0.875rem 1.5rem !important;
+    /* background: #F9F9FB !important; */
+  }
+  
+}
+@media screen and (min-width: 800px) {
+  #dropdownHoverButton{
+    display: none;
+  }
+  /* .header-container{
+    display: block;
+  } */
+  
+}
 
 @media screen and (min-width: 0px) and (max-width: 1200px) {
   .menuside { display: block; }  /* show it on small screens */
 }
+
 
 @media screen and (min-width: 1200px) and (max-width: 1500px) {
   .menuside { display: none; }   /* hide it elsewhere */
@@ -2025,25 +2054,26 @@ a {
   left: 0.4rem;
   width: 96vw;
   height: fit-content;
-  padding: 2rem 5px 5px 5px;
+  padding: 0rem 5px 5px 5px;
 }
 .explorer-col div{
    width: 100%;
+   padding-top: 0;
 }
 .explorer-col div:hover{
    background-color: #EEEFF2 !important;
 }
 
+
+
+}
+
 .header-container {
-  display: flex !important;
-  gap: 47% !important;
-  align-self: normal;
-  /* width: -webkit-fill-available !important; */
+  display: block !important;
+  /* gap: 47% !important;
+  align-self: normal; */
+  width: 90vw !important;
 }
-
-
-}
-
 .cardgridview:hover {
   background-color: #f2f2f2 !important;
 }
@@ -2407,9 +2437,9 @@ Table sub clients bg (Neutral 0)
 }
 
 .header-container {
-  display: flex !important;
-  gap: 47% !important;
-  align-self: center;
+  /* display: flex !important; */
+  /* gap: 47% !important; */
+  /* align-self: center; */
   /* width: -webkit-fill-available !important; */
 }
 

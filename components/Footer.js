@@ -2,11 +2,29 @@ import { Grid } from "@mui/material";
 import styles from "../styles/footer.module.css";
 import Typo from "./customcomponents/Typo";
 import Logo from "../components/logo"
+import { useEffect, useState } from "react";
 
 const Footer = () => {
+    const [copy, setCopy] = useState(false)
+    useEffect(()=> {
+        window.addEventListener('resize', ()=> {
+          if(window.innerWidth > 800){
+            setCopy(false)
+            // }
+          }else{
+            setCopy(true)
+          }
+          })
+          if(window.innerWidth > 800){
+            setCopy(false)
+          }else{
+            setCopy(true)
+          }
+        // })
+      },[])
     return (
         <Grid container alignItems='center' className='sitefooter'>
-            <Grid item>
+            <Grid item className={styles.footerTxt}>
                 <Grid container className={styles.footerContainer}>
                     <Grid item xs={4} container rowSpacing={0.5} className={styles.smContainer}>
                         <Grid container direction='column' alignItems='flex-start' spacing={2}>
@@ -34,11 +52,9 @@ const Footer = () => {
                                     </Grid>
                                 </Grid>
                             </Grid>
-                            <Grid item>
-                                <Typo className={styles.txt}>
-                                    Copyright © 2023 - spacescan.io
-                                </Typo>
-                            </Grid>
+                           { !copy && <Grid item>
+                            <Typo className={styles.txt}>Copyright © 2023 - spacescan.io</Typo>
+                            </Grid>}
                         </Grid>
                     </Grid>
                     <Grid item xs={1} />
@@ -100,6 +116,7 @@ const Footer = () => {
             </Grid>
             <Grid item justify="center" >
                 <Typo className={styles.headText}>Made with 💚 by <a>Spacescan.io</a></Typo>
+                {copy && <Typo className={styles.txt1}>Copyright © 2023 - spacescan.io</Typo>}
             </Grid>
         </Grid>
     );
